@@ -1,4 +1,4 @@
-# sentimental-analysis
+# sentiment-analysis
 
 # How to use this application:
 1. Login with the user.
