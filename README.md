@@ -9,9 +9,9 @@
 # Steps to run the current project locally (On Linux Machine):
 1. Create Virtual env (https://packaging.python.org/guides/installing-using-pip-and-virtualenv/)
 2. Active virtual env
-3. Copy the folder sentimental-analysis-master to appropriate location (clone the repository)
+3. Clone the repo https://github.com/bizamica/sentimental-analysis-master.git
 4. In my.ini file of MySQL change value of max_allowed_packet to 160 M (max_allowed_packet = 160M)
-5. Run following command to install the dependencies (sentimental-analysis-master/sentimental_analysis_project/requirements.txt)
+5. Run following command to install the dependancies (https://github.com/bizamica/sentimental-analysis-master/sentimental_analysis_project/requirements.txt) 
     pip install requirements.txt
 6. python manage.py makemigrations
 7. python manage.py migrate

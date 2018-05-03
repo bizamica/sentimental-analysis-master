@@ -64,7 +64,7 @@ function renderStackChart(chartData) {
                     console.log(data);
                     chartData = data.chartData;
                     chartTitle = data.chartTitle;
-                    
+
                     $('<div class=divText>' + chartTitle + '</div>').appendTo('#chartTitle');
                     renderPieChart(chartData);
                 }
@@ -92,16 +92,16 @@ $('#display-charts-q2').on('click', function(){
                     jQuery('#chart').empty();
                     var chartData = data.chartData;
                     var chartTitle = data.chartTitle;
-                    
+                    $('<div class=divText>' + chartTitle + '</div>').appendTo('#chartTitle');
                     var trHTML = '';
                     var tblHTML =  "<br><table id='famous-tweets' class='table table-bordered table-hover'><tr><th>ID </th><th>ScreenName </th><th>Text </th><th>Famous Count </th></tr></table>";
-                   
+
                    $('#charts-display').append(tblHTML);
 
                     $.each(chartData, function (i, item) {
                     trHTML += '<tr><td>' + chartData[i].id + '</td><td>' + chartData[i].screenName + '</td><td>' + chartData[i].text + '</td><td>' + chartData[i].famousCount + '</td></tr>';
                     });
-                   
+
                    $('#famous-tweets').append(trHTML);
                 }
             },
@@ -129,16 +129,16 @@ $('#display-charts-test').on('click', function(){
                     jQuery('#chart').empty();
                     var chartData = data.chartData;
                     var chartTitle = data.chartTitle;
-                    
+                    $('<div class=divText>' + chartTitle + '</div>').appendTo('#chartTitle');
                     var trHTML = '';
                     var tblHTML =  "<br><table id='retweeted-tweets' class='table table-bordered table-hover'><tr><th>ID </th><th>ScreenName </th><th>Text </th><th>ReTweeted Count </th></tr></table>";
-                   
+
                    $('#charts-display').append(tblHTML);
 
                     $.each(chartData, function (i, item) {
                     trHTML += '<tr><td>' + chartData[i].id + '</td><td>' + chartData[i].screenName + '</td><td>' + chartData[i].text + '</td><td>' + chartData[i].retweetCount + '</td></tr>';
                     });
-                   
+
                    $('#retweeted-tweets').append(trHTML);
                 }
             },
@@ -252,16 +252,16 @@ $('#display-charts-q6').on('click', function(){
                     jQuery('#chart').empty();
                     var chartData = data.chartData;
                     var chartTitle = data.chartTitle;
-                    
+                    $('<div class=divText>' + chartTitle + '</div>').appendTo('#chartTitle');
                     var trHTML = '';
                     var tblHTML =  "<br><center><table id='famous-tweets' class='table table-bordered table-hover'><tr><th>ID </th><th> ScreenName </th><th> ReTweet </th><th> Tweet </th></tr></table><center>";
-                   
+
                    $('#charts-display').append(tblHTML);
 
                     $.each(chartData, function (i, item) {
                     trHTML += '<tr><td>' + chartData[i].id + '</td><td>' + chartData[i].screenName + '</td><td>' + chartData[i].retweetCount + '</td><td>' + chartData[i].tweetCount + '</td></tr>';
                     });
-                   
+
                    $('#famous-tweets').append(trHTML);
                 }
             },
@@ -289,16 +289,16 @@ $('#display-charts-q7').on('click', function(){
                     jQuery('#chart').empty();
                     var chartData = data.chartData;
                     var chartTitle = data.chartTitle;
-                    
+                    $('<div class=divText>' + chartTitle + '</div>').appendTo('#chartTitle');
                     var trHTML = '';
                     var tblHTML =  "<br><center><table id='famous-tweets' class='table table-bordered table-hover'><tr><th>ID </th><th> User </th><th> RepliesReceived </th></tr></table><center>";
-                   
+
                    $('#charts-display').append(tblHTML);
 
                     $.each(chartData, function (i, item) {
                     trHTML += '<tr><td>' + chartData[i].id + '</td><td>' + chartData[i].user + '</td><td>' + chartData[i].repliesReceived + '</td></tr>';
                     });
-                   
+
                    $('#famous-tweets').append(trHTML);
                 }
             },
@@ -333,4 +333,3 @@ $('#processdata_id').on('click', function(){
     }
     return false;
 });
-

@@ -55,7 +55,7 @@ def get_most_famous_tweets(request):
         rows = cursor.fetchall()
         for row in rows:
             chartData.append({"id":row[0],"screenName":row[1],"text":row[2],"famousCount":row[3]})
-    return HttpResponse(content=json.dumps({'chartData':chartData, 'chartTitle': "<center><h2>Showing Get the most famous tweets.</h2></center>"}), content_type="application/json")
+    return HttpResponse(content=json.dumps({'chartData':chartData, 'chartTitle': "<center><h2>Showing the most favorite tweets.</h2></center>"}), content_type="application/json")
 
 # Q2. Get the most re-tweeted tweets
 def get_most_re_tweeted_tweets(request):
@@ -66,7 +66,7 @@ def get_most_re_tweeted_tweets(request):
         rows = cursor.fetchall()
         for row in rows:
             chartData.append({"id":row[0],"screenName":row[1],"text":row[2],"retweetCount":row[3]})
-    return HttpResponse(content=json.dumps({'chartData':chartData, 'chartTitle': "<center><h2>Showing Get the most re-tweeted tweets.</h2></center>"}), content_type="application/json")
+    return HttpResponse(content=json.dumps({'chartData':chartData, 'chartTitle': "<center><h2>Showing the most re-tweeted tweets.</h2></center>"}), content_type="application/json")
 
 
 #Q3. Create stacked chart (Retweets, Total Tweets) showing “‘Hour of the Day Trends” TweetCount Vs Hour.
