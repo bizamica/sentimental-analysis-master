@@ -60,7 +60,7 @@ def get_most_famous_tweets(request):
 # Q2. Get the most re-tweeted tweets
 def get_most_re_tweeted_tweets(request):
     chartData = []
-    sql = "SELECT x, screen_name, text, retweet_count FROM  sentimental_analysis_app_demonitisationtweets ORDER BY retweet_count DESC limit 10;"
+    sql = "SELECT x, screen_name, text, retweet_count FROM  sentimental_analysis_app_demonitisationtweets where is_retweet=False ORDER BY retweet_count DESC limit 10;"
     with closing(connection.cursor()) as cursor:
         cursor.execute(sql)
         rows = cursor.fetchall()
